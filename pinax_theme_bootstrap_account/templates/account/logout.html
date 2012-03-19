@@ -1,0 +1,23 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Log Out" %}{% endblock %}
+
+{% block body %}
+    <h1>{% trans "Log Out" %}</h1>
+    
+    <div class="row">
+        <div class="span12">
+            <form method="POST" action="{% url account_logout %}" class="form-horizontal">
+                <fieldset>
+                    {% csrf_token %}
+                    <p>{% trans "Are you sure you want to log out?" %}</p>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">{% trans "Log out" %}</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}
