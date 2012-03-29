@@ -7,7 +7,7 @@
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-                <li><a href="#"><i class="icon-user"></i> Account</a></li>
+                <li><a href="{% url account_settings %}"><i class="icon-user"></i> Settings</a></li>
                 {% if request.user.is_staff %}
                     <li><a href="{% url admin:index %}"><i class="icon-cog"></i> Admin</a></li>
                 {% endif %}
