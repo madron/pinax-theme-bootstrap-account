@@ -6,12 +6,10 @@
 {% block head_title %}{% trans "Log In" %}{% endblock %}
 
 {% block body %}
-    <h1>{% trans "Log In" %}</h1>
-    
     <div class="row">
         <div class="span8">
-            <a href="{% url account_password_reset %}">Forgot your password?</a>
             <form method="POST" action="{% url account_login %}" autocapitalize="off" class="form-horizontal"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                <legend>{% trans "Log in" %}</legend>
                 <fieldset>
                     {% csrf_token %}
                     {{ form|as_bootstrap }}
@@ -19,6 +17,7 @@
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
                     <div class="form-actions">
+                        <a href="{% url account_password_reset %}" class="btn">Forgot your password?</a>
                         <button type="submit" class="btn btn-primary">{% trans "Log in" %}</button>
                     </div>
                 </fieldset>
