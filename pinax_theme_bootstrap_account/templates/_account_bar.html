@@ -2,7 +2,9 @@
 {% load account_tags %}
 
 <div class="pull-right">
-    <p class="navbar-text pull-left">{% trans "Logged in as:" %}</p>
+    {% if request.user.is_authenticated %}
+        <p class="navbar-text pull-left">{% trans "Logged in as:" %}</p>
+    {% endif %}
     <ul class="nav pull-right">
         {% if request.user.is_authenticated %}
             <li class="dropdown">
