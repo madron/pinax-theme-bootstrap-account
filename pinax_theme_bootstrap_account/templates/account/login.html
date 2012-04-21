@@ -6,6 +6,11 @@
 {% block head_title %}{% trans "Log In" %}{% endblock %}
 
 {% block body %}
+    <header class="jumbotron subhead" id="overview">
+        <h1>{% trans "Log in" %}</h1>
+        <p class="lead">{% trans "If you have an existing account, provide your login credentials below." %}</p>
+    </header>
+
     <div class="row">
         <div class="span8">
             <form method="POST" action="{% url account_login %}" autocapitalize="off" class="form-horizontal"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
