@@ -247,7 +247,7 @@ msgstr ""
 #: templates/account/email/email_confirmation_subject.txt:1
 #, python-format
 msgid "Confirm email address for %(site_name)s"
-msgstr "Conferma l'indirrizzo email per %(site_name)s"
+msgstr "Conferma l'indirizzo email per %(site_name)s"
 
 #: templates/account/email/password_reset.txt:1
 #, python-format
